@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import home from "../assets/home.svg";
@@ -8,7 +9,9 @@ const SignIn = () => {
       <Row>
         <Col lg={6} md={12}>
           <div className="create-box form-box">
-            <h2 className="title-sign">Fiber</h2>
+            <Link to="/" className="title-sign">
+              Fiber
+            </Link>
             <h2 className="create-title">Create your Fiber account</h2>
             <Form className="form-signup">
               <Form.Group className="mb-2" controlId="formBasicEmail">
@@ -59,6 +62,9 @@ const SignIn = () => {
 
 const SignInStyle = styled.div`
   .title-sign {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
     font-weight: 800;
     margin: 3rem 0;
     font-size: 1.5rem;
