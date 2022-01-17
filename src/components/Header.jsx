@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Nav, Navbar, Container, Button } from "react-bootstrap";
 import styled from "styled-components";
 const Header = () => {
@@ -34,7 +35,7 @@ const Header = () => {
               Sign In
             </Button>
             <Button variant="outline-success" className="signup-btn">
-              Sign Up
+              <Link to="/signup">Sign Up</Link>
             </Button>
           </Navbar.Collapse>
         </Container>
@@ -62,11 +63,20 @@ const HeaderStyle = styled.div`
   .signin-btn {
     color: #000000 !important;
     font-weight: 600;
+
+    &:hover {
+      background-color: transparent !important;
+    }
   }
   .signup-btn {
     color: #fff;
     background-color: #4d13d1 !important;
     padding: 0.5rem 1.5rem !important;
+
+    a{
+      color: #fff ;
+      text-decoration: none;
+    }
   }
 
   @media only screen and (max-width: 999px) {
@@ -75,7 +85,7 @@ const HeaderStyle = styled.div`
 
   @media screen and (max-width: 768px) {
     padding: 0 2rem;
-    padding-top:1rem;
+    padding-top: 1rem;
   }
 `;
 

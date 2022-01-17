@@ -128,6 +128,14 @@ const SignInStyle = styled.div`
       display: none;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 2rem;
+  }
+  .create-box {
+    /* height:100vh; */
+    justify-content: center;
+  }
 `;
 
 export default SignIn;
